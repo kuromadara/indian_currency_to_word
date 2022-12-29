@@ -27,9 +27,10 @@ There is no prerequisites required to use this library. The library is usefull w
 import "package:indian_currency_to_word/indian_currency_to_word";
 
 final converter = AmountToWords();
+// The number argument must be of type double.
 var number = 999999991.10;
 
-var word = converter.convertAmountToWords(number);
+var word =  .convertAmountToWords(number);
 ```
 
 ## Additional information

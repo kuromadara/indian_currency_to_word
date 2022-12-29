@@ -9,3 +9,11 @@
 ## 0.0.3
 
 * max number fix.
+
+## 0.0.4
+
+* added proper docs.
+
+## 0.0.5
+
+* readme updated.

@@ -1,5 +1,6 @@
 library indian_currency_to_word;
 
+/// A class that converts an amount in Indian currency to words.
 class AmountToWords {
   final Map<int, String> _words = {
     0: '',
@@ -32,8 +33,19 @@ class AmountToWords {
     90: 'Ninety'
   };
 
+  /// A list that stores the words corresponding to the digits in Indian currency (hundred, thousand, lakh, crore).
   final List<String> _digits = ['', 'Hundred', 'Thousand', 'Lakh', 'Crore'];
 
+  /// Converts an amount in Indian currency to words.
+  ///
+  /// The [number] argument must be a double representing the amount in Indian currency.
+  /// If the number is less than zero, this method returns "Zero".
+  /// If the number is greater than 999999999, this method returns "Number is too large".
+  ///
+  /// Returns a string that represents the amount in words, in the format "X Rupees and Y Paise",
+  /// where X is the whole number in words and Y is the decimal part in words.
+  /// If the decimal part is zero, it just returns the whole number in words.
+  ///
   String convertAmountToWords(double number) {
     if (number < 0) {
       return "Zero";
