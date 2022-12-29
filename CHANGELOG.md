@@ -4,4 +4,4 @@
 
 ## 0.0.2
 
-* example fixed
+* example fixed.

@@ -38,7 +38,7 @@ class AmountToWords {
     if (number < 0) {
       return "Zero";
     }
-    if (number < 999999999) {
+    if (number > 999999999) {
       return "Number is too large";
     }
     int wholeNumber = number.floor();
