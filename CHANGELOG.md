@@ -17,3 +17,7 @@
 ## 0.0.5
 
 * readme updated.
+
+## 0.0.6
+
+* better docs and readme.

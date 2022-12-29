@@ -30,7 +30,7 @@ final converter = AmountToWords();
 // The number argument must be of type double.
 var number = 999999991.10;
 
-var word =  .convertAmountToWords(number);
+var word =  converter.convertAmountToWords(number);
 ```
 
 ## Additional information
