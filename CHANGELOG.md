@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * example fixed.
+
+## 0.0.3
+
+* max number fix.
