@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import "package:indian_currency_to_word/indian_currency_to_word";
+import "package:indian_currency_to_word/indian_currency_to_word.dart";
 
 class NoToWord extends StatelessWidget {
   final converter = AmountToWords();
