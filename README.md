@@ -11,25 +11,21 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package for both iOS and Android that converts a given amount to word in Indian Locale. Currently it support conversion till Crore. The maximum number is (999999999). 
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Converts amount to word in indian locale.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+There is no prerequisites required to use this library. The library is usefull when you are working with money related projects one such example could be a payroll system.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+final no2word = NumberToWordsConverter();
+var number = 999999991.10;
 ```
 
 ## Additional information
