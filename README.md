@@ -24,12 +24,16 @@ There is no prerequisites required to use this library. The library is usefull w
 ## Usage
 
 ```dart
-final no2word = NumberToWordsConverter();
+import "package:indian_currency_to_word/indian_currency_to_word";
+
+final converter = AmountToWords();
 var number = 999999991.10;
+
+var word = converter.convertAmountToWords(number);
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+To contribute or provide any suggestion contact me on my github or check my portfolio for contact information:
+
+[Porfolio](https://www.dayananda.tech/)
