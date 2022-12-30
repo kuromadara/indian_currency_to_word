@@ -21,3 +21,7 @@
 ## 0.0.6
 
 * better docs and readme.
+
+## 0.0.7
+
+* optional argument ignoreDecimal added.

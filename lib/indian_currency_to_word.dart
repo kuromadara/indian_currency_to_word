@@ -40,6 +40,7 @@ class AmountToWords {
   /// Converts an amount in Indian currency to words.
   ///
   /// The [number] argument must be a double representing the amount in Indian currency.
+  /// The [ignoreDecimal] argument must be a boolean representing whether to ignore the decimal part of the number. It's and optional argument. By default, it's false.
   /// If the number is less than zero, this method returns "Zero".
   /// If the number is greater than 999999999, this method returns "Number is too large".
   ///
@@ -50,7 +51,7 @@ class AmountToWords {
   /// Example:
   /// ```dart
   /// final converter = AmountToWords();
-  /// print(converter.convertAmountToWords(2)); // Two Rupees
+  /// print(converter.convertAmountToWords(2.00)); // Two Rupees
   /// print(converter.convertAmountToWords(2.5)); // Two Rupees and Fifty Paise
   /// print(converter.convertAmountToWords(2.05)); // Two Rupees and Five Paise
   /// print(converter.convertAmountToWords(2.00)); // Two Rupees
@@ -58,8 +59,9 @@ class AmountToWords {
   /// print(converter.convertAmountToWords(-7)); // Zero Rupees
   /// print(converter.convertAmountToWords(999999999)); // Nine Hundred Ninety Nine Crore Ninety Nine Lakh Ninety Nine Thousand Nine Hundred Ninety Nine Rupees
   /// print(converter.convertAmountToWords(999999999.99)); // Number is too large
+  /// print(converter.convertAmountToWords(2.34, ignoreDecimal: true)); // Two Rupees
   /// ```
-  String convertAmountToWords(double number) {
+  String convertAmountToWords(double number, {bool ignoreDecimal = false}) {
     if (number < 0) {
       return "Zero";
     }
@@ -91,6 +93,11 @@ class AmountToWords {
     String paise = (decimal > 0)
         ? '${_words[(decimal / 10).floor()]} ${_words[decimal % 10]} Paise'
         : '';
+
+    if (ignoreDecimal) {
+      return '$rupees Rupees';
+    }
+
     return '$rupees Rupees${paise != '' ? ' and $paise' : ''}';
   }
 }

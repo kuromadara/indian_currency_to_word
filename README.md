@@ -23,14 +23,24 @@ There is no prerequisites required to use this library. The library is usefull w
 
 ## Usage
 
+*NOTE* 
+The number must be double and there is a optional argument ignoreDecimal
+```dart
+ignoreDecimal: false
+```
+by default its set to false. 
+
+Example:
+
 ```dart
 import "package:indian_currency_to_word/indian_currency_to_word";
 
 final converter = AmountToWords();
 // The number argument must be of type double.
-var number = 999999991.10;
+var number = 999991.12;
 
 var word =  converter.convertAmountToWords(number);
+var wordIgnoreDecimal = converter.convertAmountToWords(number, ignoreDecimal: true)
 ```
 
 ## Additional information
