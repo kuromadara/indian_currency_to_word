@@ -23,7 +23,8 @@ There is no prerequisites required to use this library. The library is usefull w
 
 ## Usage
 
-*NOTE* 
+**NOTE**
+
 The number must be double and there is a optional argument ignoreDecimal
 ```dart
 ignoreDecimal: false
