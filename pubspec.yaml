@@ -1,6 +1,6 @@
 name: indian_currency_to_word
 description: A Flutter package for both iOS and Android that converts a given amount to word in Indian Locale.
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/kuromadara/indian_currency_to_word
 
 environment:

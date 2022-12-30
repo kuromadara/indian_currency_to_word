@@ -22,7 +22,24 @@ Converts amount to word in indian locale.
 There is no prerequisites required to use this library. The library is usefull when you are working with money related projects one such example could be a payroll system.
 
 ## Usage
+**Installing**
 
+Run the command:
+```console
+foo@bar:~$ flutter pub add indian_currency_to_word
+```
+*OR*
+
+Add a line like this to your package's pubspec.yaml:
+
+```yaml
+dependencies:
+  indian_currency_to_word: ^0.0.7
+```
+**Importing**
+```dart
+import "package:indian_currency_to_word/indian_currency_to_word";
+```
 **NOTE**
 
 The number must be double and there is a optional argument ignoreDecimal
@@ -33,6 +50,8 @@ by default its set to false.
 
 Example:
 
+*With decimal*
+
 ```dart
 import "package:indian_currency_to_word/indian_currency_to_word";
 
@@ -41,7 +60,20 @@ final converter = AmountToWords();
 var number = 999991.12;
 
 var word =  converter.convertAmountToWords(number);
-var wordIgnoreDecimal = converter.convertAmountToWords(number, ignoreDecimal: true)
+print(word);
+```
+
+*Without decimal*
+
+```dart
+import "package:indian_currency_to_word/indian_currency_to_word";
+
+final converter = AmountToWords();
+// The number argument must be of type double.
+var number = 999991.12;
+
+var word =  converter.convertAmountToWords(number, ignoreDecimal: true);
+print(word);
 ```
 
 ## Additional information

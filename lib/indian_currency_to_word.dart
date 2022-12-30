@@ -57,7 +57,7 @@ class AmountToWords {
   /// print(converter.convertAmountToWords(2.00)); // Two Rupees
   /// print(converter.convertAmountToWords(0)); // Zero Rupees
   /// print(converter.convertAmountToWords(-7)); // Zero Rupees
-  /// print(converter.convertAmountToWords(999999999)); // Nine Hundred Ninety Nine Crore Ninety Nine Lakh Ninety Nine Thousand Nine Hundred Ninety Nine Rupees
+  /// print(converter.convertAmountToWords(999999999.00)); // Nine Hundred Ninety Nine Crore Ninety Nine Lakh Ninety Nine Thousand Nine Hundred Ninety Nine Rupees
   /// print(converter.convertAmountToWords(999999999.99)); // Number is too large
   /// print(converter.convertAmountToWords(2.34, ignoreDecimal: true)); // Two Rupees
   /// ```
