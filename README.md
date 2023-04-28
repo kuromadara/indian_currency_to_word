@@ -83,4 +83,8 @@ To contribute or provide any suggestion contact me on my github or check my port
 [Porfolio](https://www.dayananda.tech/)
 
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kuromadara/indian_currency_to_word&type=Date)](https://star-history.com/#kuromadara/indian_currency_to_word&Date)
+
 
