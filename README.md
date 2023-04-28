@@ -81,3 +81,9 @@ print(word);
 To contribute or provide any suggestion contact me on my github or check my portfolio for contact information:
 
 [Porfolio](https://www.dayananda.tech/)
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=xtekky/gpt4free&type=Date)](https://star-history.com/#xtekky/gpt4free)
+
