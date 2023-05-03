@@ -90,14 +90,42 @@ class AmountToWords {
       }
     }
     String rupees = str.reversed.join('');
-    String paise = (decimal > 0)
-        ? '${_words[(decimal / 10).floor()]} ${_words[decimal % 10]} Paise'
-        : '';
+    String paise;
+
+    int paisaLength = decimal.toString().length;
+    int j = 0;
+    List<String> str2 = [];
+
+    if (decimal > 0) {
+      while (j < paisaLength) {
+        int divider = (j == 2) ? 10 : 100;
+        int currentNumber = decimal % divider;
+        decimal = decimal ~/ divider;
+        j += (divider == 10) ? 1 : 2;
+        if (currentNumber > 0) {
+          String plural = (str2.isNotEmpty && currentNumber > 9) ? 's' : '';
+          hundred = (str2.length == 1 && str2[0] != '') ? ' and ' : '';
+          str2.add((currentNumber < 21)
+              ? '${_words[currentNumber]} ${_digits[str2.length]}$plural $hundred'
+              : '${_words[(currentNumber / 10).floor() * 10]} ${_words[currentNumber % 10]} ${_digits[str2.length]}$plural $hundred');
+        } else {
+          str2.add('');
+        }
+      }
+    } else {
+      str2.add('');
+    }
+
+    paise = str2.reversed.join('');
+
+    if (rupees == '') {
+      rupees = 'Zero';
+    }
 
     if (ignoreDecimal) {
       return '$rupees Rupees';
     }
 
-    return '$rupees Rupees${paise != '' ? ' and $paise' : ''}';
+    return '$rupees Rupees${paise != '' ? ' and $paise Paise' : ''}';
   }
 }

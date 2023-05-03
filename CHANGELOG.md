@@ -29,3 +29,7 @@
 ## 0.0.8
 
 * better readme and example.
+
+## 1.0.0
+
+* paise and zero rupe bug fix
