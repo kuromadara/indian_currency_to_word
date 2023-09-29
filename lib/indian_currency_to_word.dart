@@ -1,5 +1,3 @@
-library indian_currency_to_word;
-
 /// A class that converts an amount in Indian currency to words.
 class AmountToWords {
   /// A map that stores the words corresponding to the digits in Indian currency (0-19, 20, 30, 40, 50, 60, 70, 80, 90).
@@ -31,11 +29,19 @@ class AmountToWords {
     60: 'Sixty',
     70: 'Seventy',
     80: 'Eighty',
-    90: 'Ninety'
+    90: 'Ninety',
+    100: 'Hundred'
   };
 
   /// A list that stores the words corresponding to the digits in Indian currency (hundred, thousand, lakh, crore).
-  final List<String> _digits = ['', 'Hundred', 'Thousand', 'Lakh', 'Crore'];
+  final List<String> _digits = [
+    '',
+    'Hundred',
+    'Thousand',
+    'Lakh',
+    'Crore',
+    'Crore'
+  ];
 
   /// Converts an amount in Indian currency to words.
   ///
@@ -61,20 +67,28 @@ class AmountToWords {
   /// print(converter.convertAmountToWords(999999999.99)); // Number is too large
   /// print(converter.convertAmountToWords(2.34, ignoreDecimal: true)); // Two Rupees
   /// ```
-  String convertAmountToWords(double number, {bool ignoreDecimal = false}) {
+  String convertAmountToWords(double number,
+      {bool ignoreDecimal = false, bool isAddRupee = true}) {
     if (number < 0) {
       return "Zero";
     }
-    if (number > 999999999) {
-      return "Number is too large";
-    }
+    // Zero if (number > 999999999) {
+
+    //  }
     int wholeNumber = number.floor();
     int decimal = ((number - wholeNumber) * 100).round();
     String hundred;
     int digitsLength = wholeNumber.toString().length;
     int i = 0;
     List<String> str = [];
+
     while (i < digitsLength) {
+      if (i == 7 && wholeNumber.toString().length >= 3) {
+        var s = convertAmountToWords(wholeNumber.toDouble(), isAddRupee: false);
+
+        str.add('$s ${_digits[5]} ');
+        break;
+      }
       int divider = (i == 2) ? 10 : 100;
       int currentNumber = wholeNumber % divider;
       wholeNumber = wholeNumber ~/ divider;
@@ -126,6 +140,8 @@ class AmountToWords {
       return '$rupees Rupees';
     }
 
-    return '$rupees Rupees${paise != '' ? ' and $paise Paise' : ''}';
+    return isAddRupee
+        ? '$rupees Rupees${paise != '' ? ' and $paise Paise' : ''}'
+        : '$rupees ${paise != '' ? ' and $paise Paise' : ''}';
   }
 }
