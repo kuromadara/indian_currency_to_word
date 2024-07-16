@@ -2,6 +2,12 @@
 
 A Flutter package for both iOS and Android that converts a given amount to word in Indian Locale. Currently it support conversion till Crore. The maximum number is (999999999). 
 
+## Support the Project
+
+If you find this package helpful, consider buying me a coffee to support the ongoing development and maintenance of this project:
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/dayd)
+
 ## Features
 
 Converts amount to word in indian locale.
@@ -70,8 +76,4 @@ To contribute or provide any suggestion contact me on my github or check my port
 
 [![Star History Chart](https://api.star-history.com/svg?repos=kuromadara/indian_currency_to_word&type=Date)](https://star-history.com/#kuromadara/indian_currency_to_word&Date)
 
-## Support the Project
 
-If you find this package helpful, consider buying me a coffee to support the ongoing development and maintenance of this project:
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/dayd)
